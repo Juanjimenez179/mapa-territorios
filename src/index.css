@@ -3,3 +3,14 @@ html, body, #root,  .leaflet-container {
     margin: 0;
     padding: 0;
 }
+
+.territorio-label {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+  border: 1px solid #ccc;
+  pointer-events: none;
+}

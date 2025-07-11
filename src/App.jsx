@@ -79,7 +79,15 @@ const App = () => {
 
   const onEachFeature = (feature, layer) => {
     layer.on("click", () => handleClick(feature, layer));
-    layer.bindPopup("Territorio #" + (feature.properties.id + 1));
+    // layer.bindPopup("Territorio #" + (feature.properties.id + 1));
+
+    // ✅ Mostrar nombre como etiqueta siempre visible
+    const label = feature.properties.name || "T-" + (feature.properties.id + 1);
+    layer.bindTooltip(label, {
+      permanent: true,
+      direction: "center",
+      className: "territorio-label",
+    });
   };
 
   const style = (feature) => {
